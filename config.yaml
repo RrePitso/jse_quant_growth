@@ -1,0 +1,13 @@
+data:
+  symbols: ["NPN.JO", "SOLJ.JO", "CPI.JO", "AGL.JO", "MTN.JO"]
+  period: "5y"
+  interval: "1d"
+
+model:
+  features: ["price_change_7d", "volatility", "rsi", "volume_change"]
+  target_horizon_days: 7
+  algorithm: "lightgbm"
+
+ranking:
+  max_price: 100
+  top_n: 10
